@@ -1,5 +1,7 @@
 package com.example.Personal.Budget.Planner.repository;
 
-public class CategoryRepository {
+import com.example.Personal.Budget.Planner.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
+public interface CategoryRepository extends JpaRepository<User, Long> {
 }
