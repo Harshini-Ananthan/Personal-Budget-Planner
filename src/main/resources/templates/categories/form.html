@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Category Form</title>
+    <!-- link rel="stylesheet" th:href="@{/css/category.css}" -->
+</head>
+<body>
+<h1 th:if="${category.category_id == null}">Create Category</h1>
+<h1 th:if="${category.category_id != null}">Edit Category</h1>
+<form th:action="${category.category_id == null} ? @{/categories} : @{/categories/update/{category_id}(category_id=${category.category_id})}"
+th:object="${category}" method="post">
+    <label>Name: <input type="text" th:field="*{name}" required/></label><br/>
+    <label>Budget Limit: <input type="number" step="0.01" th:field="*{budget_limit}" required/></label><br/>
+    <!-- User Dropdown -->
+    <label>
+        User:
+        <select name="user_id" id="user_id" required>
+            <option value="">-- Select User --</option>
+            <option th:each="user : ${users}"
+                    th:value="${user.user_id}"
+                    th:text="${user.name}"
+                    th:selected="${category.user != null and user.user_id == category.user.user_id}">
+            </option>
+        </select>
+    </label>
+    <br/>
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
