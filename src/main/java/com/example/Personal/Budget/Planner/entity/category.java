@@ -20,6 +20,6 @@ public class Category {
     private String name;
     private BigDecimal budget_limit;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Transaction> transactions;
 }

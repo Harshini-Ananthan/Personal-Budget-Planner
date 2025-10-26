@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Form</title>
+    <!-- link rel="stylesheet" th:href="@{/css/user.css}" -->
+</head>
+<body>
+<h1 th:if="${user.user_id == null}">Create User</h1>
+<h1 th:if="${user.user_id != null}">Edit User</h1>
+<form th:action="${user.user_id == null} ? @{/users} : @{/users/update/{user_id}(user_id=${user.user_id})}"
+th:object="${user}" method="post">
+    <label>Name: <input type="text" th:field="*{name}" required/></label><br/>
+    <label>Email: <input type="email" th:field="*{email}" required/></label><br/>
+    <label>Contact No: <input type="tel" th:field="*{contact_no}" required/></label><br/>
+    <label>Joining Date: <input type="datetime-local" th:field="*{join_date}" required/></label><br/>
+
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
