@@ -1,0 +1,182 @@
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header / Navbar */
+h1 {
+    background-color: #0994a3;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Main container */
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Buttons */
+button, .btn {
+    background-color: #0994a3;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 500;
+}
+
+button:hover, .btn:hover {
+    background-color: #3fd59c;
+}
+
+/* ===== Form Page Styles ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+}
+
+label {
+    font-weight: 600;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="datetime-local"],
+select {
+    padding: 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 60px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #0994a3;
+    box-shadow: 0 0 0 3px rgba(79,70,229,0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+/* ===== List Page Styles ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.9rem;
+    text-align: left;
+}
+
+th {
+    background-color: #0994a3;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+tr:hover {
+    background-color: #b9f7f5;
+}
+
+/* ===== Form Button Styles ===== */
+button {
+    display: inline-block;       
+    background-color: #0994a3;   
+    color: #fff;
+    padding: 8px 18px;           
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 7rem;               
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ===== Common Link Styles ===== */
+a {
+    display: inline-block;
+    background-color: #0994a3; 
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 0.3rem;
+    width: 13rem; 
+}
+
+a:hover {
+    background-color: #059669;  
+    transform: translateY(-2px);
+}
+
+a:active {
+    transform: translateY(0);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    color: #555;
+    margin-top: auto;
+}

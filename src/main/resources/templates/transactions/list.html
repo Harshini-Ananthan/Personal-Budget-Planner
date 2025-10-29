@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Transactions</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <h1>Transactions</h1>
+    <a href="/transactions/new">Add New Transaction</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>User</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="transaction : ${transactions}">
+                <td th:text="${transaction.transaction_id}"></td>
+                <td th:text="${transaction.type}"></td>
+                <td th:text="${transaction.amount}"></td>
+                <td th:text="${transaction.transaction_date}"></td>
+                <td th:text="${transaction.description}"></td>
+                <td th:text="${transaction.user != null ? transaction.user.name : 'N/A'}"></td>
+                <td th:text="${transaction.category != null ? transaction.category.name : 'N/A'}"></td>
+                <td>
+                    <a th:href="@{/transactions/edit/{id}(id=${transaction.transaction_id})}">Edit</a>
+                    <a th:href="@{/transactions/delete/{id}(id=${transaction.transaction_id})}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

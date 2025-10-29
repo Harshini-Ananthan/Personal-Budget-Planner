@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Budget Planner</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+<body>
+    <header>
+        <h1>PERSONAL BUDGET PLANNER</h1>
+        
+    </header>
+
+    <main>
+        <section class="intro">
+            <nav>
+            <ul>
+                <li><a th:href="@{/transactions}">Transactions</a></li>
+                <li><a th:href="@{/users}">Users</a></li>
+                <li><a th:href="@{/categories}">Categories</a></li>
+            </ul>
+            </nav>
+            <h2>Welcome to Your Budget Dashboard</h2>
+            <p>
+                Track your income, expenses, and savings all in one place.
+                Start managing your finances smartly and stay on top of your budget.
+            </p>
+            <a th:href="@{/transactions}" class="btn">View Transactions</a>
+        </section>
+
+        <section class="features">
+            <div class="card">
+                <h3>Track Expenses</h3>
+                <p>Record and monitor all your daily expenses easily.</p>
+            </div>
+
+            <div class="card">
+                <h3>Analyze Spending</h3>
+                <p>Get insights on how and where your money is spent.</p>
+            </div>
+
+            <div class="card">
+                <h3>Manage Users</h3>
+                <p>Keep track of users who add or manage transactions.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Personal Budget Planner | harshiniananthan30@gmail.com</p>
+    </footer>
+</body>
+</html>
